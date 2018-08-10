@@ -1,7 +1,7 @@
-/*
- * @Author: changge
+s/*
+ * @Author: xixi
  * @Date: 2018-06-01 14:50:54
- * @Last Modified by:   changge
+ * @Last Modified by:   xixi
  * @Last Modified time: 2018-06-05 10:50:54
  */
 import Vue from 'vue';

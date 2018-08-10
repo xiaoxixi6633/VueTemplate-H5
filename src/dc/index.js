@@ -1,7 +1,7 @@
 /*
- * @Author: changge
+ * @Author: xixi
  * @Date: 2018-06-05 10:37:25
- * @Last Modified by: changge
+ * @Last Modified by: xixi
  * @Last Modified time: 2018-06-05 16:39:43
  */
 import oUser from './api/user';

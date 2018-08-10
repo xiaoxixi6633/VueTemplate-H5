@@ -1,7 +1,7 @@
 /*
- * @Author: changge
+ * @Author: xixi
  * @Date: 2018-06-01 17:36:06
- * @Last Modified by:   changge
+ * @Last Modified by:   xixi
  * @Last Modified time: 2018-06-04 17:36:06
  */
 const auth = () => import('@/pages/auth/index');
