@@ -1,4 +1,4 @@
-s/*
+/*
  * @Author: xixi
  * @Date: 2018-06-01 14:50:54
  * @Last Modified by:   xixi
@@ -17,12 +17,6 @@ import oDC from './dc';
 
 Vue.config.productionTip = false;
 
-router.beforeEach((to, from, next) => {
-  if (from.path !== to.path) {
-    document.title = to.name || '捷思致诚  执信以越';
-  }
-  next();
-});
 
 Vue.use(oDC);
 Vue.use(AlertPlugin);
