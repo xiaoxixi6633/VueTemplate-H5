@@ -12,12 +12,16 @@ class UserLogin extends BaseAPI {
   constructor() {
     super();
     this.sUpdateUrl = '';
-    this.sValidateUrl = '/auth/login';
+    this.sValidateUrl = '/mc-auth/auth/login';
   }
   update(option = {}) {
     return fnPureProcessResourceData({
       url: this.sUpdateUrl,
       method: 'post',
+      dataType: 'json',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      },
       ...option,
     });
   }
@@ -25,6 +29,10 @@ class UserLogin extends BaseAPI {
     return fnPureProcessResourceData({
       url: this.sValidateUrl,
       method: 'post',
+      dataType: 'json',
+      headers: {
+        'Content-Type': 'application/json;charset=UTF-8'
+      },
       ...option,
     });
   }
@@ -57,3 +65,4 @@ export default {
   user: new User(),
   userLogin: new UserLogin(),
 };
+
