@@ -11,8 +11,10 @@ import {
   LoadingPlugin,
 } from 'vux';
 import App from './App';
+import store from './store';
 import router from './router';
 import oDC from './dc';
+import 'babel-polyfill'; 
 
 
 Vue.config.productionTip = false;
@@ -26,5 +28,6 @@ Vue.use(LoadingPlugin);
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App),
 });
