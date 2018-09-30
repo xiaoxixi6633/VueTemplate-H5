@@ -9,10 +9,10 @@ const login = () => import('@/pages/auth/login/index');
 const register = () => import('@/pages/auth/register/index');
 
 export default [{
-  path: '/auth',
+  path: '/',
   name: 'auth',
   component: auth,
-  redirect: '/auth/login',
+  redirect: '/login',
   children: [
     {
       path: 'login',

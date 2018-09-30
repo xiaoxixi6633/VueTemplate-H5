@@ -1,0 +1,63 @@
+.login_main {
+	padding:0 10px;
+  .username {
+    font-size:16px;
+    height:45px;
+    border:1px solid #ccc;
+    display:flex;
+    span {
+      font-size:16px;
+      height:40px;
+      line-height:40px;
+      width:80px;
+      text-align:right;
+    }
+    input {
+      display:block;
+      flex:1;
+      border:none;
+      height:40px;
+      line-height:40px;
+      outline:none;
+    }
+  }
+  .password {
+    font-size:16px;
+    height:45px;
+    border:1px solid #ccc;
+    margin-top:18px;
+    display:flex;
+    span {
+      font-size:16px;
+      height:40px;
+      line-height:40px;
+      width:80px;
+      text-align:right;
+    }
+    input {
+      display:block;
+      flex:1;
+      border:none;
+      height:40px;
+      line-height:40px;
+      outline:none;
+    }
+  }	
+  .loginBtn {
+  	width:90%;
+  	height:45px;
+  	margin: 30px auto 0;
+  	text-align:center;
+  	background:#4C94FF;
+  	border-radius:8px;
+  	button {
+  	  background:none;
+  	  border:none;
+  	  line-height:45px;
+  	  color:#fff;
+  	  outline:none;
+  	}
+  }
+}
+
+

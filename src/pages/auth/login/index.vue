@@ -5,17 +5,20 @@
  * @Last Modified time: 2018-06-06 14:42:05
  */
 <template lang="pug">
-div
-  div 用户名：
-    input(v-model="sUserName")
-  div 密码：
-    input(v-model="sPassWord")
-  div
-    button(@click="fnClickLogin") login
+div.login_main
+  div.username
+    span 用户名：
+    input.username_input(v-model="sUserName")
+  div.password 
+    span 密码：
+    input.password_input(v-model="sPassWord")
+  div.loginBtn
+    button(@click="fnClickLogin") 登录
 
 </template>
 
 <script>
+import {mapActions} from 'vuex';
 export default {
   name: 'login',
   data() {
@@ -25,24 +28,34 @@ export default {
     };
   },
   methods: {
+      ...mapActions(['saveUserid','saveDeviceinfo']),
     fnClickLogin() {
       if (!this.sUserName || !this.sPassWord) {
-        this.$vux.toast.text('请输入账号密码！', 'center');
+        this.$vux.toast.text('请输入账号或密码！', 'center');
         return;
       }
       this.$vux.loading.show({
-        text: 'login',
+        text: '登录中...',
       });
+      let _data = {
+        phone: this.sUserName,
+        pwd: this.sPassWord,
+      }
       this.$dataCenter.userLogin
         .validate({
-          data: {
-            userName: this.sUserName,
-            passWord: this.sPassWord,
-          },
+          data: _data,
         })
         .then(res => {
           this.$vux.loading.hide();
-          this.$router.replace('/home');
+          res.code = 200;
+          let token = '23787474sdf'
+          if(res.code ===200){
+            this.saveUserid(token);
+            this.saveDeviceinfo(12);
+            this.$router.push('/home');
+          } else {
+            this.$vux.toast.text(res.msg, 'center');
+          }
         })
         .catch(oError => {
           if (oError) {
@@ -53,13 +66,13 @@ export default {
         });
     },
   },
-  mounted() {},
+  mounted() {
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss">
 @import './index.scss';
-
 </style>
 
