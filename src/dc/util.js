@@ -6,10 +6,10 @@
  */
 import Promise from 'promise';
 import Vue from 'vue';
-
+import net from '@/dc/net.js';
 // 用法：https://github.com/axios/axios#request-config
 import axios from 'axios';
-
+axios.defaults.baseURL = net.BASE_URL;
 // 用法：https://github.com/pillarjs/path-to-regexp
 import pathToRegExp from 'path-to-regexp';
 
@@ -34,13 +34,16 @@ function fnPureProcessResourceData(option, fnArgModel) {
   return new Promise(function (resolve, reject) {
     if (option.oNoneRESTful) {
       let toPath = pathToRegExp.compile(option.url);
+      
       try {
+        
         option.url = toPath(option.oNoneRESTful);
       } catch (e) {
         console.error(e);
         return;
       }
     }
+    console.log(option);
     axios(option)
       .then((oRes) => {
         let fnBsnHandleCommonError = (oError = {}) => {
