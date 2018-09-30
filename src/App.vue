@@ -6,7 +6,6 @@
  */
 <template>
   <div id="app">
-    <img src="./assets/images/common/logo.png">
     <router-view/>
   </div>
 </template>
