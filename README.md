@@ -1,8 +1,15 @@
-# 前端VUE项目(VUEX,pug模板)基础机构v0.0.2
+# 构建的基于 Vue 的模板  支持多页面开发。有什么问题可以提交 Issues 或者 用其他方式联系我。
 
-## 注意事项
+## 技术栈
+   vue
+   vue-router
+   vuex
+   axios
+   pug
 
-
+## 特性
+   引入了Vue 2.0全家桶的环境
+   配置好了webpack
 
 ## Build Setup
 
