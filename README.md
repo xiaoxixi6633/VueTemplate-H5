@@ -2,17 +2,19 @@
   有什么问题可以提交 Issues 或者 用其他方式联系我。
 
 ## 技术栈
+```bash
    ### vue
    ### vue-router
    ### vuex
    ### axios
    ### pug
    ### es6
-
+```
 ## 特性
+```bash
    ### 引入了Vue 2.0全家桶的环境
    ### 配置好了webpack
-
+```
 ## Build Setup
 
 ``` bash
