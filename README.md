@@ -2,16 +2,16 @@
   有什么问题可以提交 Issues 或者 用其他方式联系我。
 
 ## 技术栈
-   # vue
-   # vue-router
-   # vuex
-   # axios
-   # pug
-   # es6
+   ### vue
+   ### vue-router
+   ### vuex
+   ### axios
+   ### pug
+   ### es6
 
 ## 特性
-   # 引入了Vue 2.0全家桶的环境
-   # 配置好了webpack
+   ### 引入了Vue 2.0全家桶的环境
+   ### 配置好了webpack
 
 ## Build Setup
 
